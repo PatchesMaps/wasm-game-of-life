@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+  </head>
+  <style>
+    body {
+      user-select: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+    }
+    #play-pause {
+      position: absolute;
+      top: 0px;
+    }
+    #controls {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 450px;
+      bottom: 0px;
+      background: white;
+    }
+    #tpc {
+      display: flex;
+      width: 85%;
+    }
+  </style>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <button id="play-pause">⏸</button>
+    <canvas id="game-of-life-canvas"></canvas>
+    <div id="controls">
+      <input id="tpc" type="range" name="tpc" min="0" max="10" step="0.01" value="1" list="tickmarks" />
+      <datalist id="tickmarks">
+        <option value="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+        <option value="6"></option>
+        <option value="7"></option>
+        <option value="8"></option>
+        <option value="9"></option>
+        <option value="10"></option>
+      </datalist>
+      <label id="tpc_label" for="tpc">0</label>
+    </div>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
